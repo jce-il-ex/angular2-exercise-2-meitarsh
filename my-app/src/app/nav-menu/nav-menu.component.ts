@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
 
+@Input() item;
+
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  myFunc() {
+    console.log('child: ' + this.item.id);
   }
 
 }
