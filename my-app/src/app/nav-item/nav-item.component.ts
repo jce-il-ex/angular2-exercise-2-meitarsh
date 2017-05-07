@@ -1,34 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-item',
   templateUrl: './nav-item.component.html',
   styleUrls: ['./nav-item.component.css']
 })
-export class NavItemComponent implements OnInit {
+export class NavMenuComponent implements OnInit {
 
-myList = [
-{
-  id:1,
-  txt: 'item 1' 
-},
-{
-  id:2,
-  txt: 'item 2' 
-},
-{
-  id:3 ,
-  txt: 'item 3'
-},
-{
-  id:4,
-  txt: 'item 4' 
-}
-];
+@Input() item;
 
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  myFunc() {
+    console.log('child: ' + this.item.id);
   }
 
 }
