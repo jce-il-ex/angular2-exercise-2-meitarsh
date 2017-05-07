@@ -5,7 +5,7 @@ import { Component, OnInit,Input } from '@angular/core';
   templateUrl: './nav-item.component.html',
   styleUrls: ['./nav-item.component.css']
 })
-export class NavMenuComponent implements OnInit {
+export class NavItemComponent implements OnInit {
 
 @Input() item;
 
